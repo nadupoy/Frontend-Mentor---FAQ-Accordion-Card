@@ -14,71 +14,36 @@
 }
 
 * {
-    margin: 0;
     font-family: 'Kumbh Sans', sans-serif;
+    margin: 0;
 }
 
 html {
     min-height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 body {
     background: linear-gradient(var(--bg-gradient-soft-violet), var(--bg-gradient-soft-blue));
-    background-repeat: no-repeat;
-    
+    margin: auto;
 }
 
 main {
-    width: 320px;
     margin-bottom: 16px;
+}
+
+.faqs {
     background-color: var(--main-bg-color);
-    border-radius: 16px;
-}
-
-.illustration {
-    background-position-x: center;
-    background-image: url('./images/bg-pattern-mobile.svg');
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    height: 136px;
-}
-
-/* picture {
-    width: 240px;
-    transform: translateY(-110px);
-} */
-
-@media screen and (max-width: 1439px) {
-    .box-illustration {
-        display: none;
-    }
 }
 
 h1 {
     text-align: center;
     color: var(--text-very-dark-desaturated-blue);
-    font-weight: var(--body-font-weight-bold);
-    margin-bottom: 24px;
-}
-
-.faqs {
-    padding-bottom: 32px;
+    margin-bottom: 16px;
 }
 
 details {
-    font-size: var(--body-font-size);
-    width: 240px;
-    margin: auto;
-}
-
-hr {
-    width: 240px;
-    margin: auto;
-    color: var(--divider-light-grayish-blue);
+    font-size: 12px;
 }
 
 .questions {
@@ -86,25 +51,34 @@ hr {
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
-    color: var(--text-very-dark-grayish-blue);
-    height: 32px;
+    height: 40px;
+    color: var(--text-very-dark-desaturated-blue);
 }
 
-.questions-view-answer {
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: auto auto;
-    color: var(--text-very-dark-desaturated-blue);
+.questions:hover {
+    cursor: pointer;
+    color: var(--text-soft-red);
+}
+
+.questions-toggled {
     font-weight: var(--body-font-weight-bold);
 }
 
-.arrow-icon {
+svg {
     justify-self: end;
 }
 
+.arrow-icon-toggled {
+    transform: rotate(180deg);
+}
+
 .answers {
-    color: var(--text-dark-grayish-blue);
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    color: var(--text-very-dark-grayish-blue);
+}
+
+hr {
+    color: var(--divider-light-grayish-blue);
 }
 
 footer {
@@ -122,4 +96,86 @@ footer a {
 
 footer a:visited {
     text-decoration: none;
+}
+
+@media screen and (max-width: 1439px) {
+    main {
+        max-width: 320px;
+    }
+
+    .box-illustration {
+        display: none;
+    }
+
+    .illustration {
+        /*fills out the parent container*/
+        display: flex;
+        justify-content: center;
+        transform: translateY(72px);
+    }
+
+    .illustration > img {
+        width: 240px;
+    }
+
+    .faqs {
+        max-width: 320px;
+        padding-top: 120px;
+        padding-bottom: 32px;
+        border-radius: 16px;
+        background-image: url('./images/bg-pattern-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+
+    details, hr {
+        width: 240px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    main {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-items: center;
+    }
+
+    .box-illustration {
+        object-fit: contain;
+        z-index: 20;
+        margin-right: -80px;
+        margin-bottom: -88px;
+    }
+
+    .illustration {
+        margin-right: -310px;
+        z-index: 10;
+    }
+
+    .illustration > img {
+        /* Fixed image dimension */
+        height: 280px;
+        object-fit: cover;
+        object-position: 100% 50%;
+        width: 310px;
+    }
+
+    .faqs {
+        min-width: 400px;
+        padding-top: 56px;
+        padding-bottom: 56px;
+        padding-left: 320px;
+        border-radius: 16px;
+        background-image: url('./images/bg-pattern-desktop.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* Set the height of the 'background-position' property to a %age (proportional) value so as to maintain proportion as the height of its container varies w.r.t how many detail elements are open(ed). */
+        background-position: -410px 65%;
+    }
+
+    details, hr {
+        width: 320px;
+        margin: auto;
+    }
 }
