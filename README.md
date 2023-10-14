@@ -36,7 +36,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/faq-accordion-card-rCol_GKGfk](https://www.frontendmentor.io/solutions/faq-accordion-card-rCol_GKGfk)
 - Live Site URL: [https://faq-accordion-card-nadupoy.netlify.app/](https://faq-accordion-card-nadupoy.netlify.app/)
 
 ## My process
@@ -86,7 +86,7 @@ Users should be able to:
 
 <br>
 
-- Each `<details>` element required a custom drop-down symbol that involved changing the [`list-style-type`]() and the [`display`]() property, in conjuction with using a custom symbol within the [`<summary>`]() element.
+- Each `<details>` element required a custom drop-down symbol that involved changing the [`list-style-type`](https://www.w3schools.com/cssref/pr_list-style-type.php) to `none` so as to remove the default marker and setting the [`display`](https://www.w3schools.com/cssref/pr_class_display.php) property to `grid`. A custom symbol was added to the [`<summary>`](https://www.w3schools.com/tags/tag_summary.asp) element.
 ```css
 .questions {
     list-style-type: none;
@@ -119,8 +119,8 @@ body {
 
 <br>
 
-- I added an event handler to the `toggle` event of all the `<detail>` elements using a `for(...) {...}`.<br>
-The event handlers used were [`anonymous functions`]() in the form of [`arrow functions`](), since the functions used are short and comprise of a few statements:
+- I added an event handler to the `toggle` event of all the `<detail>` elements using a `for(...) {...}` loop.<br>
+The event handlers used were [`anonymous functions`](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_function_example) in the form of [`arrow functions`](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#arrow_functions), since the functions used are short and comprise of a few statements:
 
 ```js
 ...
@@ -153,10 +153,11 @@ The interactivity of the element seemed to have been affected by the value of th
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [MDN Web Docs](https://developer.mozilla.org/en-US/)
+- [W3 Schools](https://www.w3schools.com/)
+- [JavaScript.info](https://javascript.info/)
+- [The Markdown Guide](https://www.markdownguide.org/)
+- [Git Documentation](https://git-scm.com/doc)
 
 ## Author
 
